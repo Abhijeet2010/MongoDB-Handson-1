@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Create a database , give it name like ""Human_Resource"". Create a collection inside this named ""employee""
+    
+    Query the collection ""employee"" and list all the documents
+    Query the collection ""employee"" and list the employees who are having salary more than 30000
+    Query the collection ""employee"" and list the employees who are having experience more than 2 years.
+    Query the collection ""employee"" and list the employees who are graduated after 2015 and having experience more than 1 year 
+    Query the collection ""employee"" and update the salary of the employee whose salary is greater than 70000 to 65000.
+    Delete all the documents from ""employee"" where last company is Y" -->
+
+    <!-- Question 1 -->
+    <div class="question">
+      <p>
+        Question 1 :- Create a database , give it name like ""Human_Resource"".
+        Create a collection inside this named ""employee""
+      </p>
+
+      <p>Ans:-</p>
+      <div class="codeBox">
+        <pre>use Human_Resources</pre>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Question 2 -->
+
+    <div class="question">
+      <p>
+        Question 2 :- Query the collection ""employee"" and list all the
+        documents
+      </p>
+
+      <p>Ans:-</p>
+      <div class="codeBox">
+        <pre>
+db.employee.find({})
+        </pre>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Question 3 -->
+
+    <div class="question">
+      <p>
+        Question 3 :- Query the collection ""employee"" and list the employees
+        who are having salary more than 30000
+      </p>
+
+      <p>Ans:-</p>
+      <div class="codeBox">
+        <pre>
+  db.employee.find({"salary":{"$gt":30000}})
+          </pre
+        >
+      </div>
+    </div>
+    <hr />
+
+    <!-- Question-4 -->
+
+    <div class="question">
+      <p>
+        Question 4:- Query the collection ""employee"" and list the employees
+        who are having experience more than 2 years.
+      </p>
+
+      <p>Ans:-</p>
+      <div class="codeBox">
+        <pre>
+            db.employee.find({overallExp: {$gt: 2}})
+
+            </pre
+        >
+      </div>
+    </div>
+    <hr />
+
+    <!-- Question 5 -->
+
+    <div class="question">
+      <p>
+        Question 5:- Query the collection ""employee"" and list the employees
+        who are graduated after 2015 and having experience more than 1 year
+      </p>
+
+      <p>Ans:-</p>
+      <div class="codeBox">
+        <pre>
+            db.employee.find({graduation_year: {$gt: 2015}, experience: {$gt: 1}})
+
+  
+              </pre
+        >
+      </div>
+    </div>
+    <hr />
+
+    <!-- Question 6 -->
+
+    <div class="question">
+      <p>
+        Question 6:- Query the collection ""employee"" and update the salary of
+        the employee whose salary is greater than 70000 to 65000.
+      </p>
+
+      <p>Ans:-</p>
+      <div class="codeBox">
+        <pre>
+            db.employee.updateMany({salary: {$gt: 70000}}, {$set: {salary: 65000}})
+                </pre
+        >
+      </div>
+    </div>
+    <hr />
+
+    <!-- Question 7 -->
+
+    <div class="question">
+      <p>
+        Question 6:- Delete all the documents from ""employee"" where last
+        company is Y".
+      </p>
+
+      <p>Ans:-</p>
+      <div class="codeBox">
+        <pre>
+            db.employee.deleteMany({lastCompany: "Y"})
+                  </pre
+        >
+      </div>
+    </div>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.question > p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p {
+  font-weight: bold;
+}
+
+.codeBox {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
